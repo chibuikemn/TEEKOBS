@@ -60,6 +60,11 @@ nav {
     color: #ff69b4;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #ff69b4;
+}
+
 .nav-links {
     display: flex;
     list-style: none;

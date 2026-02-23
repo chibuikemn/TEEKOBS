@@ -11,9 +11,11 @@ document.querySelectorAll('.dish-card').forEach(card => {
 
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
         const target = this.getAttribute('href');
-        document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+        if (target.startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
